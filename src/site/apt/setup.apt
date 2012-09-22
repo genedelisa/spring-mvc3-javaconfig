@@ -1,0 +1,36 @@
+ -----
+Test Project setup
+ -----
+ Gene De Lisa
+ -----
+ September 2009
+ -----
+
+~~ http://maven.apache.org/doxia/references/apt-format.html
+
+Project Set up
+
+*Eclipse/RAD
+
+	Install the Sonatype maven plugin. (m2)
+	The update site is: http://m2eclipse.sonatype.org/update/
+	
+	
+*Dependencies
+
+	
+**Import
+
+
+
+**Running
+
+
+
+**Links
+
+   * {{{./architecture.html}Architecture}}
+ 
+
+	
+ 

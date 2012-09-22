@@ -1,0 +1,17 @@
+ -----
+ The Site
+ -----
+ The Maven Team
+ -----
+
+Spring MVC 3 Example
+
+	This is an example of configuring Spring MVC 3 without XML.
+	
+	The site is generated via maven using this invocation:
+	
++-----+
+
+mvn site
+
++-----+

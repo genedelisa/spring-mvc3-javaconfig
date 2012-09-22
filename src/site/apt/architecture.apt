@@ -1,0 +1,114 @@
+ -----
+ Example Architecture
+ -----
+ Gene De Lisa
+ -----
+ August 2009
+ -----
+
+
+Test project Architecture
+
+*Layers
+
+	There are two physical models: a domain model with persistence and a web model. 
+	
+	These models could be represented by two sibling maven projects, but for simplicity, there are not.
+	
+*Logical architecture
+
+**Domain layer
+
+	*Regular Java objects. Knows nothing about other layers.
+	
+	
+**Persistence layer
+
+	*Knows about Domain layer.
+	
+	*Uses JPA for ORM fronted by Spring Data.
+	
+	*Each DB table is a Java class and each table row is an object.
+ 	
+	*Uses a Spring Data repository
+
+	*Unit tests extends AbstractTransactionalJUnit4SpringContextTests
+	
+	*Transactions demarcated on unit test methods
+
+**Service layer
+
+	*Knows about persistence layer
+
+	*Knows nothing about web layer
+	
+	*Injected with a Repository by spring.
+	
+	*Methods closely match Repository methods.
+	
+	*Service delegates to Repository
+	
+	*Methods are transactional. Multiple Repository methods may be called in a single transaction. 
+	
+	*Service methods can enforce business rules.
+	
+
+**Web layer
+
+	*Knows about service layer and domain layer.
+	
+	*Knows nothing about persistence layer.
+	
+	
+*CRUD
+
+	Each Repository contains CRUD methods. Many finders/getters that correspond to SQL selects (actually JPA queries)
+Debugged reusable JPA queries are refactored to NamedQueries in the domain object.
+The Repository methods are repeated in the Service. (the web layers does not know the persistence layer)
+Each CRUDdy domain class will have the following web pages.
+
+**List
+
+	Paging and column sorting enabled.
+Each row has a checkbox for selection and buttons for deletion, edit and details.
+User will be asked for confirmation on delete.
+Selected rows may be deleted from a global button.
+Only important attributes of the domain object are displayed. The Detail page will display all of them.
+
+**Edit
+
+	When a row's edit button is activated the edit page will be populated with that row's data.
+User can save the changes or cancel to return to the List page.
+
+**Detail
+
+	An output only page that displays all the attributes of the domain object.
+Buttons to Edit or Cancel to return to the list.
+
+**Create
+
+	Very similar to the Edit page. But there are required fields with validation.
+User can save the changes or cancel to return to the List page.
+
+**Search
+
+	A form with a search criterion and a combobox with searchable domain object attributes.
+Some attributes may be searchable via a non exact match (using the JPA like keyword).
+The results are sent to a SearchResults page.
+
+ 
+*Issues
+
+	There can be an even simpler demo using jetty which is what I'm using during development. Goes up and down in seconds rather than tens of minutes.
+
+	A caching implementation should be integrated at a later release. (EHCache? OSCache? SwarmCache?)
+
+
+**Links
+
+   * {{{./architecture.html}Architecture}}
+   * {{{./setup.html}Set up}}
+   
+ 
+	
+ 

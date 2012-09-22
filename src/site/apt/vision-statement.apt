@@ -1,0 +1,27 @@
+ -----
+ The Example Domain Vision Statement
+ -----
+Gene De Lisa
+ -----
+ January 2003
+ 
+Introduction
+
+ This application demonstrates Maven 3 site generation functionalities. One of the nicer features of Maven is the ability to create an internal technical web site 
+ at very little cost. Maven 3 extends this functionality, and gives you powerful new ways 
+ to generate site content...
+
+* Team Communication
+
+ Team communication is an essential part of any project. And wasting time looking for technical
+ project information can be costly and frustrating. Clearly, any IT project will benefit from 
+ having its own dedicated technical web site. Some useful things it provides are:
+ 
+ * Online javadoc
+ 
+ * Quality assurance
+ 
+   * Static code audits with Checkstyle or PMD
+   
+   * Unit test reports
+   

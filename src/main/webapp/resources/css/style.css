@@ -1,0 +1,22 @@
+/* ===== Primary Styles ========================================================
+   Author: Gene De Lisa
+   ========================================================================== */
+
+
+body {
+	font-family: sans-serif;
+	font-size: 16px;
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+.error {
+	color: red;
+	font-style: italic; 
+}
+
+
+
+
+
+

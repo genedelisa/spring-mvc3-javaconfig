@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<configuration>
+
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+		<!--  
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+			-->
+			<pattern>%.-1level|%-40.40logger{0}|%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
+		<file>mvc.log</file>
+		<encoder>
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="RollingFile"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>${user.dir}/logs/app.log</file>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>${user.dir}/logs/app.%d{yyyy-MM-dd}.log.zip
+			</fileNamePattern>
+		</rollingPolicy>
+
+		<encoder>
+			<pattern>%.-1level|%-40.40logger{0}|%msg%n</pattern>
+		</encoder>
+	</appender>
+
+	<logger name="com.rockhoppertech" level="DEBUG" />
+	<logger name="org.springframework" level="DEBUG" />
+
+	<root level="WARN">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+
+</configuration>

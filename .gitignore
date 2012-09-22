@@ -1,0 +1,8 @@
+/target
+/.project
+/.classpath
+/junk
+/logs
+/.springBeans
+/.DS_Store
+/mvc.log

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<project name="Rockhopper Spring MVC 3 Example" xmlns="http://maven.apache.org/DECORATION/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.0.0
+           http://maven.apache.org/xsd/decoration-1.0.0.xsd">
+
+	<bannerLeft>
+		<name>Rockhopper</name>
+		<src>http://www.rockhoppertech.com/images/rocky-scream-25.jpg</src>
+		<href>http://www.rockhoppertech.com/blog//</href>
+	</bannerLeft>
+
+	<bannerRight>
+		<src>http://maven.apache.org/images/maven-small.gif</src>
+	</bannerRight>
+
+	<body>
+		<links>
+			<item name="Rockhopper Technologies" href="http://rockhoppertech.com/" />
+			<item name="Rockhopper blog" href="http://rockhoppertech.com/blog" />
+		</links>
+
+		<menu ref="reports" />
+
+		<menu name="Project dox">
+			<item name="Architecture" href="architecture.html" />
+			<item name="Setup" href="setup.html" />
+			<item name="FAQ" href="faq.html" />
+			<item name="Vision" href="vision-statement.html" />
+		</menu>
+
+	</body>
+</project>
