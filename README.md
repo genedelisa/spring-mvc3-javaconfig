@@ -13,7 +13,7 @@ The JSP pages are written in HTML5. The pages use [Twitter Bootstrap] (http://tw
 for layout and CSS styling. Take a look at the login form and you won't see the typical table tags
 used for layout. For compatibility with older browsers, [Modernizr](http://modernizr.com/) is used.
 
-This project also ses the Servlet 3.0 ability to replace web.xml
+This project also uses the Servlet 3.0 ability to replace web.xml
 
 Maven
 ------
@@ -31,12 +31,13 @@ The site plugin with several reporting plugins is also configured. Take a look a
 
 Resources
 ----------
-- [blog post for this example](http://rockhoppertech.com/blog/spring-mvc-configuration-without-xml) "Blog"
+- [blog post for this example](http://rockhoppertech.com/blog/spring-mvc-configuration-without-xml)
 - [Spring Reference](http://static.springsource.org/spring/docs/current/spring-framework-reference/html)
 - [Spring Java-based container configuration](http://static.springsource.org/spring/docs/current/spring-framework-reference/html/beans.html#beans-java)
-- [Maven](http://maven.apache.org) "Maven"
-- [Servlet 3.0 spec](http://jcp.org/en/jsr/detail?id=315) "Servlet spec"
-- [Twitter Bootstrap] (http://twitter.github.com/bootstrap/) "Bootstrap"
-- [Modernizr](http://modernizr.com/) "Modernizr"
+- [HTML5](http://www.w3.org/TR/html5/)
+- [Maven](http://maven.apache.org)
+- [Servlet 3.0 spec](http://jcp.org/en/jsr/detail?id=315)
+- [Twitter Bootstrap] (http://twitter.github.com/bootstrap/)
+- [Modernizr](http://modernizr.com/)
 
 
